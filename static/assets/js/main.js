@@ -1,3 +1,4 @@
+
 (function() {
   "use strict";
 
@@ -249,3 +250,7 @@
   });
 
 })()
+document.getElementById('uploadBtn').addEventListener('change', function() {
+  var filename = this.files[0].name;
+  document.getElementById('file-upload-filename').textContent = filename;
+});

@@ -31,17 +31,17 @@
 </head>
 
 <body>
-<header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center">
+<header id="header" class="fixed-top background">
+    <div class="container d-flex align-items-center ">
 
-        <h1 class="logo me-auto"><a href="index.html">X - Ray Enhancer</a></h1>
+        <h1 class="logo me-auto"><a href="/">X - Ray Enhancer</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
         <nav id="navbar" class="navbar">
         <ul>
-            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-            <li><a class="nav-link scrollto" href="#about">About</a></li>
+            <li><a class="nav-link scrollto" href="/">Home</a></li>
+            <!-- <li><a class="nav-link scrollto" href="#about">About</a></li> -->
             <li><a class="nav-link scrollto" href="#services">Process</a></li>
             <!-- <li><a class="nav-link   scrollto" href="#portfolio">Portfolio</a></li> -->
             <!--<li><a class="nav-link scrollto" href="#team">Team</a></li>
@@ -56,22 +56,29 @@
     <main id="main">
 
         <!-- ======= Image processing Section ======= -->
-        <section id="about" class="about">
+        <section id="about" class="about mt-5">
           <div class="container" data-aos="fade-up">
-            <div class="container">
-                
-                <h1>Original Image</h1>
-                <img src="{{ url_for('static', filename='uploads/' + original_filename ) }}" alt="Original Image">
-                <p><a href="{{ url_for('download', filename=original_filename) }}" download>Download Original Image</a></p>
-                
-            
-                <h1>Enhanced Image</h1>
-                <img src="{{ url_for('static', filename='uploads/' + processed_filename) }}" alt="Enhanced Image">
-                <p><a href="{{ url_for('download', filename=processed_filename) }}" download>Download Enhanced Image</a></p>
-          
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <h1>Original Image</h1>
+                    <br>
+                    <img src="{{ url_for('static', filename='uploads/' + original_filename ) }}" alt="Original Image" class="img-fluid w-50">
+                    <div class="mt-5">
+                      <button class=" buttoner rounded-pill px-3 py-2"><a href="{{ url_for('download', filename=original_filename) }}" download class="text-white text-decoration-none">Download</a></button>
+                  </div>
+  
+                </div>
+                <div class="col-md-6 text-center">
+                    <h1>Enhanced Image</h1>
+                    <br>
+                    <img src="{{ url_for('static', filename='uploads/' + processed_filename) }}" alt="Enhanced Image" class="img-fluid w-50">
+                    <div class="mt-5">
+                      <button class="buttoner rounded-pill px-3 py-2"><a href="{{ url_for('download', filename=processed_filename) }}" download class="text-white text-decoration-none">Download</a></button>
+                  </div>
+  
+                </div>
             </div>
-            
-          </div>
+        </div>
         </section><!-- End image processing Section -->
             <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
@@ -86,7 +93,7 @@
             <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
               <div class="icon-box">
                 <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                <h4><a href="">Access the X-ray Image Enhancer websites:</a></h4>
+                <h4><a href="#">Access the X-ray Image Enhancer websites:</a></h4>
                 <p>Visit the X-ray Image Enhancer platform or application through your web browser or designated access point.
                 </p>
               </div>
@@ -119,55 +126,7 @@
         </div>
       </section><!-- End Services Section -->
     </main>
-    <footer id="footer">
-        <div class="footer-top">
-          <div class="container">
-            <div class="row">
-    
-              <div class="col-lg-3 col-md-6 footer-contact">
-                <h3>Project team</h3>
-                <p>
-                  CSE final year,<br>
-                  Government College of Engineering,<br>
-                  Erode, 638316<br>
-                  Tamil Nadu, India<br><br>
-                  <strong>Phone:</strong> +91 9876543210<br>
-                  <strong>Email:</strong> abcd@gmail.com<br>
-                </p>
-              </div>
-    
-              <div class="col-lg-3 col-md-6 footer-links">
-                <h4>Useful Links</h4>
-                <ul>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#about">About </a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#services">Process</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#team">Team</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#faq">Frequently asked Questions?</a></li>
-                </ul>
-              </div>
-    
-              <div class="col-lg-3 col-md-6 footer-links">
-                <h4>Our Social Networks</h4>
-                <div class="social-links mt-3">
-                  <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                  <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                  <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                  <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                  <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <div class="container footer-bottom clearfix">
-          
-          <div class="credits">
-            Designed by CSE students
-          </div>
-        </div>
-      </footer><!-- End Footer -->
+    <!-- End Footer -->
     
         <div id="preloader"></div>
     
@@ -184,5 +143,5 @@
     
       <!-- Template Main JS File -->
       <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
-
+      
 </body>

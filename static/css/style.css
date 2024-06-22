@@ -2,7 +2,50 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
+.background{
+  background: rgba(40, 58, 90, 0.9);
+}
 
+.buttoner{
+  border-color: rgba(114, 165, 253, 0.9);
+  background-color: rgba(30, 72, 145, 0.9);
+}
+
+.buttoner:active{
+  background-color: #0c3c53;
+  color:white;
+}
+
+/* upload button*/
+
+.file-upload-wrapper1 {
+  position: relative;
+  width: 700px;
+  height: 200px;
+  border: 3px dashed rgba(40, 58, 90, 0.9);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+
+}
+.file-upload-wrapper1 input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.file-upload-text1 {
+  font-size: 16px;
+  color: rgba(40, 58, 90, 0.9);
+}
+.custom-upload-button1 {
+  margin-top: 15px;
+  font-size: 16px;
+    color: rgba(56, 95, 163, 0.9);
+}
 /* upload button */
 /* input[type="file"]{
   display: none;

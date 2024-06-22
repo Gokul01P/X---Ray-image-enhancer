@@ -15,7 +15,7 @@ def enhance_contrast(image):
     if len(image.shape) > 2:
         image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     equalized_image = cv2.equalizeHist(image)
-    return equalized_image
+    return equalized_image  
 
 def sharpening(image):
     blurred = cv2.GaussianBlur(image, (0,0), 1)
